@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>故事投稿 - 无围墙博物馆</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #685141;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* 居民访谈板块样式 */
+        .interview-section {
+            margin-bottom: 30px;
+        }
+
+        .main-video-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .main-video-container video {
+            width: 100%;
+            max-width: 800px;
+            cursor: pointer;
+        }
+
+        .small-videos-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+
+        .small-video {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .small-video video {
+            width: 200px;
+            height: 150px;
+        }
+
+        /* 居民讲述院落故事板块样式 */
+        .yard-story-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .story-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .story-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* 投稿表单样式 */
+        .submit-form {
+            margin-top: 30px;
+        }
+
+        .submit-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .submit-form input,
+        .submit-form textarea,
+        .submit-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>无围墙博物馆 - 北京西四北三条胡同</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html"> 西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <li><a href="feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="#">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>故事投稿</h2>
+        <!-- 居民访谈板块 -->
+        <section class="interview-section">
+            <h3>居民访谈</h3>
+            <div class="main-video-container">
+                <video id="main-video" controls>
+                    <source src="interview_video1.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <div class="small-videos-container">
+                <div class="small-video">
+                    <video src="interview_video2.mp4" type="video/mp4"></video>
+                    <p>访谈主题2：儿时的回忆</p>
+                </div>
+                <div class="small-video">
+                    <video src="interview_video3.mp4" type="video/mp4"></video>
+                    <p>访谈主题3：胡同文化传承</p>
+                </div>
+                <!-- 可添加更多视频 -->
+            </div>
+        </section>
+        <!-- 居民讲述院落故事板块 -->
+        <section class="yard-story-section">
+            <h3>居民讲述院落故事</h3>
+            <div class="story-item">
+                <img src="yard_story_image1.jpg" alt="院落故事1">
+                <p>故事标题1：百年老宅的传奇</p>
+                <p>故事内容1：这座百年老宅承载着几代人的回忆，见证了胡同的变迁...</p>
+            </div>
+            <div class="story-item">
+                <img src="yard_story_image2.jpg" alt="院落故事2">
+                <p>故事标题2：家族的传承</p>
+                <p>故事内容2：在这个院落里，家族的传统和文化得以传承和延续...</p>
+            </div>
+            <!-- 可添加更多故事 -->
+        </section>
+        <!-- 投稿表单 -->
+        <section class="submit-form">
+            <h3>我要投稿</h3>
+            <form>
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+                <label for="story-type">投稿类型</label>
+                <select id="story-type" name="story-type">
+                    <option value="interview">居民访谈</option>
+                    <option value="yard-story">居民讲述院落故事</option>
+                </select>
+                <label for="story-content">故事内容</label>
+                <textarea id="story-content" name="story-content" rows="4" required></textarea>
+                <label for="media">上传媒体（视频/图片）</label>
+                <input type="file" id="media" name="media">
+                <button type="submit">提交投稿</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+    <script>
+        // 为视频添加点击播放事件
+        const mainVideo = document.getElementById('main-video');
+        mainVideo.addEventListener('click', function () {
+            if (this.paused) {
+                this.play();
+            } else {
+                this.pause();
+            }
+        });
+
+        const smallVideos = document.querySelectorAll('.small-video video');
+        smallVideos.forEach(function (video) {
+            video.addEventListener('click', function () {
+                mainVideo.src = this.src;
+                mainVideo.load();
+                mainVideo.play();
+            });
+        });
+
+        // 下方小视频自动切换（每 5 秒切换一次）
+        let currentIndex = 0;
+        function autoSwitchVideos() {
+            currentIndex = (currentIndex + 1) % smallVideos.length;
+            const nextVideo = smallVideos[currentIndex];
+            mainVideo.src = nextVideo.src;
+            mainVideo.load();
+            mainVideo.play();
+        }
+        setInterval(autoSwitchVideos, 5000);
+    </script>
+</body>
+
+</html>    

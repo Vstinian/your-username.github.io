@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色建筑与院落 - 无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- 引入 PhotoSwipe 样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 40px 0 30px;
+            text-align: center;
+        }
+
+        .image-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .timeline li {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #67453d;
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #67453d;
+        }
+
+        /* PhotoSwipe 样式 */
+        .pswp__caption__center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>特色建筑与院落</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html">西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2 class="section-title">西四北特色建筑与院落</h2>
+
+        <!-- 广济寺板块 -->
+        <h3 class="text-xl font-bold mb-4">一、广济寺：千年古寺的兴衰变迁</h3>
+        <div class="image-group" id="guangji-temple">
+            <figure>
+                <img src="../media/buildings/guangji_mingqing_layout.jpg" alt="明清广济寺建筑格局图" data-index="0">
+                <figcaption>明清时期广济寺建筑格局图（据《乾隆京城全图》）</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/buildings/guangji_modern_panorama.jpg" alt="现代广济寺全景" data-index="2">
+                <figcaption>现代修缮后的广济寺全景</figcaption>
+            </figure>
+        </div>
+        <ul class="timeline">
+            <li><strong>历史脉络</strong>：宋末始建为西刘村寺，元大都时期沿用，明成化二年赐名“弘慈广济”，清康熙年间扩建，民国失火后重修，现为中国佛教协会驻地。</li>
+            <li><strong>建筑特色</strong>：中轴对称布局，保留山门、天王殿、大雄宝殿等明清建筑，西北隅戒坛为重要宗教活动场所。</li>
+        </ul>
+
+        <!-- 历代帝王庙板块 -->
+        <h3 class="text-xl font-bold mb-4">二、历代帝王庙：皇家祭祀建筑的典范</h3>
+        <div class="image-group" id="emperor-temple">
+            <figure>
+                <img src="../media/buildings/emperor_temple_qianlong.jpg" alt="乾隆时期历代帝王庙复原图" data-index="0">
+                <figcaption>乾隆时期历代帝王庙复原图</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/buildings/emperor_temple_gate_2004.jpg" alt="2004年修缮中的大门" data-index="1">
+                <figcaption>2004年修缮工程中的帝王庙大门（龚渤 摄）</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/buildings/emperor_temple_repaired.jpg" alt="修旧如旧的大门顶部" data-index="2">
+                <figcaption>“修旧如旧”的帝王庙大门顶部（李伟 摄）</figcaption>
+            </figure>
+        </div>
+        <ul class="timeline">
+            <li><strong>历史脉络</strong>：前身为保安寺，明嘉靖十年改建为帝王庙，清雍正、乾隆时期多次修缮，现存建筑体现明清官式风格。</li>
+            <li><strong>文化意义</strong>：供奉历代帝王牌位，见证中国古代礼制文化，2004年修缮后重现历史风貌。</li>
+        </ul>
+
+        <!-- 名人故居板块 -->
+        <h3 class="text-xl font-bold mb-4">三、名人故居：梨园与政商传奇的见证</h3>
+        <div class="image-group" id="celebrity-homes">
+            <figure>
+                <img src="../media/buildings/cheng_yanqiu_house.jpg" alt="程砚秋故居外观" data-index="0">
+                <figcaption>程砚秋故居（西四北三条39号院）外观</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/buildings/ma_fuxiang_house.jpg" alt="马福祥旧居现状" data-index="1">
+                <figcaption>马福祥旧居（西四北三条11号院，现为西四北幼儿园）</figcaption>
+            </figure>
+            <!-- 可添加更多故居图片 -->
+        </div>
+        <ul class="timeline">
+            <li><strong>程砚秋故居</strong>：京剧“程派”创始人故居，书斋“御霜簃”见证戏曲理论研究，院中梨树为当年授艺场所。</li>
+            <li><strong>马福祥旧居</strong>：民国政要宅邸，现为西四北幼儿园，三进院落布局，东跨院花园保留叠石假山与游廊。</li>
+        </ul>
+
+        <!-- 隆长寺遗迹板块 -->
+        <h3 class="text-xl font-bold mb-4">四、隆长寺遗迹：明代汉经厂的历史印记</h3>
+        <div class="image-group" id="longchang-temple">
+            <figure>
+                <img src="../media/buildings/longchang_gate.jpg" alt="隆长寺现存山门" data-index="0">
+                <figcaption>隆长寺现存山门（李伟 摄）</figcaption>
+            </figure>
+            <!-- 可添加更多遗迹图片 -->
+        </div>
+        <ul class="timeline">
+            <li>明代作为汉经厂外厂使用，现存山门为历史仅存遗迹，曾供奉千佛绕毗卢铜佛，见证宗教与宫廷文化交融。</li>
+        </ul>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+
+    <!-- 引入 PhotoSwipe 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-ui-default.min.js"></script>
+    <script>
+        function openPhotoSwipe(images) {
+            const pswpElement = document.querySelectorAll('.pswp')[0];
+            const items = images.map((img) => ({
+                src: img.src,
+                w: img.naturalWidth,
+                h: img.naturalHeight,
+                title: img.alt
+            }));
+
+            const options = {
+                index: parseInt(event.target.dataset.index),
+                showHideOpacity: true,
+                shareEl: false
+            };
+
+            const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        }
+
+        const imageGroups = document.querySelectorAll('.image-group');
+        imageGroups.forEach((group) => {
+            const images = Array.from(group.querySelectorAll('img'));
+            images.forEach((img) => {
+                img.addEventListener('click', () => {
+                    openPhotoSwipe(images);
+                });
+            });
+        });
+    </script>
+
+    <!-- PhotoSwipe 容器 -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

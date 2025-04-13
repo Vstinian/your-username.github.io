@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* 优化整体布局 */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        main img {
+            width: 30%;
+            margin-right: 30px;
+        }
+
+        .intro {
+            width: calc(70% - 30px);
+        }
+
+        /* 优化志愿者之家布局 */
+        .volunteer-home {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.volunteer-home h2 {
+    margin-bottom: 10px;
+}
+
+.volunteer-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.volunteer-button:hover {
+    background-color: #0056b3;
+}
+
+/* 美化报名窗口样式 */
+#volunteer-signup-form {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#volunteer-signup-form label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#volunteer-signup-form input,
+#volunteer-signup-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#volunteer-signup-form input:focus,
+#volunteer-signup-form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#volunteer-signup-form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#volunteer-signup-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>无围墙博物馆 - 北京西四北三条胡同</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html"> 西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <li><a href="feedback.html">反馈与建议</a>
+                    <ul>
+                        <li><a href="#">线上信箱</a></li>
+                        <li><a href="#">游客点评</a></li>
+                    </ul>
+                </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <img src="C:\Users\Aseky\Desktop\无围墙博物馆 - 整理后的版本\media\homepage.jpg" alt="北京西四北三条胡同全景">
+        <div class="intro">
+            <p>欢迎来到无围墙博物馆——北京西四北三条胡同，这里没有围墙与展柜，历史在街巷流动。西四北三条胡同位于北京市西城区，是西四北大街沿线保存较完好的传统胡同之一。灰墙灰瓦间，清水脊门楼、砖雕与抱鼓石静述着明清建筑之美，是北京旧城棋盘式街巷的活化石。</p>
+            <p>走进西四北三条，您将邂逅元大都的坊巷遗韵、明清四合院的建筑艺术，以及现代城市更新的智慧。胡同以院为展厅，以路为展线，邀您用脚步丈量八百年烟火人间。</p>
+            <p>（更多互动导览和胡同信息详见网站其他板块。）</p>
+        </div>
+    </main>
+    <!-- 添加志愿者之家窗口 -->
+    <div class="volunteer-home">
+        <h2>志愿者之家</h2>
+        <!-- 假设视频文件名为 volunteer_intro.mp4 -->
+        <video width="640" height="360" controls>
+            <source src="../media/volunteer_intro.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+        <a href="#" class="volunteer-button" id="volunteer-signup-btn">我要报名志愿者</a>
+        <div id="volunteer-signup-form" style="display: none;">
+            <form>
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">电话:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="age">年龄:</label>
+                <input type="number" id="age" name="age" required>
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="reason">申请理由:</label>
+                <textarea id="reason" name="reason" required></textarea>
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+    <script src="searchIndex.js"></script>
+    <script src="search.js"></script>
+    <script>
+        document.getElementById('volunteer-signup-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            var form = document.getElementById('volunteer-signup-form');
+            if (form.style.display === 'none') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

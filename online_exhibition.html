@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线上展示 - 无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- 引入Three.js库（用于3D模型展示） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/loaders/GLTFLoader.js"></script>
+    <!-- 新增 Pannellum 库 -->
+    <link rel="stylesheet" href="https://pannellum.org/dist/pannellum.css">
+    <script src="https://pannellum.org/dist/pannellum.js"></script>
+    <style>
+        .history-grid {
+            display: grid;
+            /* 设置为两行，上面三个下面两个 */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+            /* 居中排布 */
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 调整第四个和第五个元素的位置，使其位于第二行 */
+        .history-card:nth-child(4) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .history-card:nth-child(5) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .history-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            /* 保持长：宽 = 4:3 */
+            aspect-ratio: 4 / 3;
+        }
+
+        .history-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(3px);
+        }
+
+        .history-card h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 文字颜色换成 #b7453d */
+            color: #b7453d;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .history-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>线上展示 — 胡同文化全景体验</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html"> 西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <li><a href="feedback.html">反馈与建议</a>
+                    <ul>
+                        <li><a href="#">线上信箱</a></li>
+                        <li><a href="#">游客点评</a></li>
+                    </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- 虚拟游览板块 -->
+        <section class="virtual-tour">
+            <h2 class="tour-title">虚拟游览胡同</h2>
+            <!-- 全景图片展示（可替换为全景库如Pannellum） -->
+            <div id="panorama">
+                <img src="C:\Users\Aseky\Desktop\无围墙博物馆 - 整理后的版本\media\panorama.jpg" alt="胡同全景"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- 3D模型展示（示例：加载一个GLTF格式的模型） -->
+            <h3>3D建筑模型</h3>
+            <div id="threejs-container"></div>
+            <script>
+                // 初始化Three.js场景
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth - 40, 500);
+                document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+                // 添加灯光
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+                scene.add(ambientLight);
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                directionalLight.position.set(5, 5, 5);
+                scene.add(directionalLight);
+
+                // 加载GLTF模型（需替换为实际模型路径）
+                const loader = new THREE.GLTFLoader();
+                loader.load(
+                    'building.gltf', // 模型文件路径
+                    (gltf) => {
+                        scene.add(gltf.scene);
+                        gltf.scene.scale.set(0.01, 0.01, 0.01); // 调整模型大小
+                        camera.position.set(0, 2, 5); // 相机位置
+                    },
+                    (xhr) => {
+                        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                    },
+                    (error) => {
+                        console.error('模型加载错误:', error);
+                    }
+                );
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    renderer.render(scene, camera);
+                }
+                animate();
+
+                pannellum.viewer('panorama', {
+                    "type": "equirectangular", // 球面全景图类型（常用）
+                    "panorama": "panorama.jpg", // 全景图路径（与 HTML 同目录）
+                    "autoLoad": true, // 页面加载后自动加载全景图
+                    "minZoom": 0.5, // 最小缩放比例（0.1-10）
+                    "maxZoom": 2.0, // 最大缩放比例
+                    "showControls": true, // 显示默认控制按钮（缩放、复位）
+                    "showNavArrows": true, // 显示导航箭头（用于多场景切换，单场景可关闭）
+                    "autoRotate": 0, // 自动旋转速度（0 为关闭，负数为顺时针）
+                    "fov": 90 // 初始视角范围（角度，值越大视角越广）
+                });
+            </script>
+        </section>
+
+        <!-- 历史资料与文物展示 -->
+        <section class="history-section">
+            <h2 class="tour-title">胡同历史资料馆</h2>
+            <div class="history-grid">
+                <!-- 历史沿革 -->
+                <a href="history_evolution.html" class="history-card">
+                    <img src="history_evolution.jpg" alt="历史沿革">
+                    <h3>历史沿革</h3>
+                </a>
+                <!-- 特色建筑与院落 -->
+                <a href="special_building.html" class="history-card">
+                    <img src="special_buildings.jpg" alt="特色建筑与院落">
+                    <h3>特色建筑与院落</h3>
+                </a>
+                <!-- 胡同名称演变 -->
+                <a href="name_evolution.html" class="history-card">
+                    <img src="name_evolution.jpg" alt="胡同名称演变">
+                    <h3>胡同名称演变</h3>
+                </a>
+                <!-- 四合院大门文化 -->
+                <a href="courtyard_gate.html" class="history-card">
+                    <img src="courtyard_gate_culture.jpg" alt="四合院大门文化">
+                    <h3>四合院大门文化</h3>
+                </a>
+                <!-- 保护与传承 -->
+                <a href="protection_inheritance.html" class="history-card">
+                    <img src="protection_inheritance.jpg" alt="保护与传承">
+                    <h3>保护与传承</h3>
+                </a>
+            </div>
+        </section>
+        <div style="text-align: center; margin-top: 20px;">
+            <small>资料由社区提供，更多历史细节将持续更新补充</small>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+</body>
+
+</html>   

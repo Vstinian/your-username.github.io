@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/road.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1 class="header-title">无围墙博物馆 - 北京西四北三条胡同</h1>
+    </header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul class="sub-nav-list">
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html"> 西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit.road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="feedback.html">反馈与建议</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li class="search-container">
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <main class="main-container">
+        <section class="section">
+            <h2 class="section-title">社区平面图</h2>
+            <img src="..\media\map\map1.jpg" alt="社区平面图" class="section-image">
+            <p class="section-description">这张平面图展示了社区的整体布局，各个区域的分布情况。您可以通过图中的标识，初步了解社区内不同地块的位置关系。</p>
+        </section>
+        <section class="section">
+            <h2 class="section-title">社区游览线路图</h2>
+            <img src="..\media\map\map2.jpg" alt="社区游览线路图" class="section-image">
+            <p class="section-description">此图为推荐的游览线路，沿着线路您可以依次游览社区内的特色地点。图中标注了一些重要的景点和建筑，帮助您更好地规划行程。</p>
+        </section>
+        <section class="section">
+            <h2 class="section-title">游览线路详情</h2>
+            <ol class="list-decimal">
+                <li>从西四北大街进入西四北三条社区，您将开启一段充满老北京韵味的旅程。首先映入眼帘的是社区入口处的传统建筑风貌，这里保留了许多历史的痕迹。</li>
+                <li>沿着西四北三条前行，您会看到一些古旧的四合院。这些四合院是老北京居住文化的典型代表，其独特的建筑结构和布局，见证了岁月的变迁。</li>
+                <li>继续游览，您可能会发现一些具有特色的小店。在这里，您可以品尝到地道的北京小吃，或是购买一些具有北京特色的纪念品。</li>
+                <!-- 根据实际线路继续添加更多步骤 -->
+            </ol>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 版权所有</p>
+    </footer>
+    <script>
+        // 示例：点击图片放大查看
+        const images = document.querySelectorAll('img');
+        images.forEach(image => {
+            image.addEventListener('click', function () {
+                const enlargedImage = document.createElement('img');
+                enlargedImage.src = this.src;
+                enlargedImage.classList.add('absolute', 'top-1/2', 'left-1/2', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'z-50', 'w-full', 'h-auto','max-w-screen-lg','max-h-screen-lg');
+                document.body.appendChild(enlargedImage);
+                enlargedImage.addEventListener('click', function () {
+                    document.body.removeChild(this);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

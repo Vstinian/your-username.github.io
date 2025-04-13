@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保护与传承 - 无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 40px 0 30px;
+            text-align: center;
+        }
+
+        .image-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        figure {
+            text-align: center;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        figure img {
+            height: 250px; /* 设置固定高度 */
+            width: auto; /* 宽度自适应，保持纵横比 */
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.03);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .feature-list li {
+            margin: 15px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li:before {
+            content: "\f0da";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #b7453d;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .quote {
+            font-style: italic;
+            color: #67453d;
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #67453d;
+        }
+
+        @media (max-width: 768px) {
+            .image-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>保护与传承</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="../attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="../attraction2.html">西四北幼儿园</a></li>
+                    <li><a href="../attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="../online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="../storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2 class="section-title">胡同保护与传承：时光淬炼下的活态遗产</h2>
+
+        <!-- 修缮对比板块 -->
+        <h3 class="text-xl font-bold mb-4">一、修缮工程：唤醒历史建筑的记忆</h3>
+        <div class="image-group">
+            <figure>
+                <img src="../media/protection/longchang_before.jpg" alt="隆长寺修缮前">
+                <figcaption>隆长寺山门修缮前（李伟 摄）</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/protection/longchang_after.jpg" alt="隆长寺修缮后">
+                <figcaption>隆长寺山门修缮后（李伟 摄）</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/protection/street_view.jpg" alt="胡同风貌整治成果">
+                <figcaption>西四北三条胡同风貌整治后全景</figcaption>
+            </figure>
+        </div>
+
+        <!-- 保护措施板块 -->
+        <h3 class="text-xl font-bold mb-4">二、保护与活化措施</h3>
+        <ul class="feature-list">
+            <li>1992年《北京城市总体规划》将西四北头条至八条纳入历史文化保护区，明确建筑高度与风貌控制要求</li>
+            <li>2015年启动“百院保护工程”，对程砚秋故居、马福祥旧居等重点院落进行腾退修缮，恢复“一院一景”</li>
+            <li>建立《胡同保护修缮技术导则》，规范青砖灰瓦、门墩砖雕等传统工艺的修复标准</li>
+        </ul>
+
+        <!-- 社区行动板块 -->
+        <h3 class="text-xl font-bold mb-4">三、社区参与：让历史活在当下</h3>
+        <div class="image-group">
+            <figure>
+                <img src="../media/protection/heritage_exhibition.jpg" alt="社区非遗展览">
+                <figcaption>西四北社区非遗展览现场</figcaption>
+            </figure>
+            <figure>
+                <img src="../media/protection/culture_festival.jpg" alt="胡同文化节">
+                <figcaption>年度胡同文化节上的传统手工艺展示</figcaption>
+            </figure>
+        </div>
+        <ul class="feature-list">
+            <li>成立“胡同守护者”志愿者团队，定期巡查历史建筑并记录民居故事</li>
+            <li>西四北四条小学开设“胡同文化课”，学生参与绘制院落历史手绘地图</li>
+            <li>举办“老宅新生”摄影展，通过居民镜头展现四合院生活美学</li>
+        </ul>
+
+        <!-- 呼吁倡议 -->
+        <div class="quote">
+            “每一块砖雕、每一处门墩，都是老北京的记忆密码，需你我共同守护。”
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+
+    <!-- 图片放大插件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-ui-default.min.js"></script>
+    <script>
+        function openPhotoSwipe(images) {
+            const pswpElement = document.querySelectorAll('.pswp')[0];
+            const items = images.map(img => ({
+                src: img.src,
+                w: img.naturalWidth,
+                h: img.naturalHeight,
+                title: img.alt
+            }));
+            const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, { index: 0 });
+            gallery.init();
+        }
+
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('click', function () {
+                const images = Array.from(this.parentElement.parentElement.querySelectorAll('img'));
+                openPhotoSwipe(images);
+            });
+        });
+    </script>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <!-- 插件UI组件 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>    

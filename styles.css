@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6ead4;
+}
+
+nav {
+    background-color: #685141;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #685141;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 12px 16px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #685141;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.attraction-info {
+    line-height: 1.6;
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加图片阴影 */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* 图片悬停效果 */
+}
+
+/* 视频样式 */
+.attraction-video {
+    width: 100%;
+    height: auto;
+}
+
+/* 二维码样式 */
+.qrcode {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* 调整图片样式，使其占据左上角四分之一位置 */
+main img {
+    float: left;
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* 介绍内容样式 */
+.intro {
+    line-height: 1.6;
+}
+
+/* 虚拟游览板块 */
+.virtual-tour {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tour-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#panorama {
+    width: 100%;
+    height: 500px;
+    background: #eee;
+    margin: 20px 0;
+}
+
+/* 3D模型容器 */
+#threejs-container {
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+}
+
+/* 历史资料板块 */
+.history-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.history-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.history-card:hover {
+    transform: scale(1.02);
+}
+
+.history-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+/* 新增图标样式 */
+.site-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px; /* 调整图标大小 */
+    height: 50px;
+    border-radius: 50%; /* 使图标变为圆形 */
+    object-fit: cover; /* 保持图片比例 */
+}
+
+header {
+    position: relative; /* 确保图标相对于 header 定位 */
+    background-color: #685141;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 文字板块背景框样式（新增/修改部分） */
+.text-block {
+    margin-bottom: 40px;
+    background-color: #f9f5eb; /* 柔和的浅米色背景 */
+    padding: 20px;
+    border-radius: 12px; /* 增大圆角使边框更柔和 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 柔和的阴影效果 */
+    overflow: auto;
+}
+
+/* 虚拟游览板块、历史资料板块等原有板块的背景色同步调整（保持风格统一） */
+.virtual-tour,
+.history-section {
+    background-color: #f9f5eb; /* 与 text-block 背景色一致 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片阴影和悬停效果（优化阴影细腻度） */
+img {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* 更细腻的阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 新增阴影过渡效果 */
+}
+
+img:hover {
+    transform: scale(1.03); /* 减小缩放比例，悬停更自然 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* 悬停时加深阴影 */
+}
+

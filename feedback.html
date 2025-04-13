@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反馈与建议</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>无围墙博物馆 - 北京西四北三条胡同</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html"> 西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <li><a href="feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <!-- 页面主体 -->
+    <main class="container mx-auto p-8">
+        <!-- 线上信箱 -->
+        <section class="bg-white p-6 rounded-md shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-4">线上信箱</h2>
+            <form id="mailbox-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">姓名</label>
+                    <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded-md"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">邮箱</label>
+                    <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded-md"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 font-bold mb-2">主题</label>
+                    <input type="text" id="subject" name="subject" class="w-full border border-gray-300 p-2 rounded-md"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">内容</label>
+                    <textarea id="message" name="message" rows="4"
+                        class="w-full border border-gray-300 p-2 rounded-md" required></textarea>
+                </div>
+                <button type="submit" class="bg-yellow-400 text-white p-2 rounded-md hover:bg-yellow-500">提交</button>
+            </form>
+        </section>
+
+        <!-- 游客点评 -->
+        <section class="bg-white p-6 rounded-md shadow-md">
+            <h2 class="text-2xl font-bold mb-4">游客点评</h2>
+            <!-- 已有点评列表 -->
+            <div id="reviews-list" class="mb-4">
+                <!-- 模拟已有点评 -->
+                <div class="review-item">
+                    <div class="review-avatar"></div>
+                    <div class="review-content">
+                        <p class="review-name">张三</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="review-text">这里的景色太美了，非常值得一去！</p>
+                        <img src="https://picsum.photos/200/150" alt="游客上传图片" class="review-image">
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar"></div>
+                    <div class="review-content">
+                        <p class="review-name">李四</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="review-text">体验很不错，工作人员也很热情。</p>
+                        <img src="https://picsum.photos/200/150" alt="游客上传图片" class="review-image">
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar"></div>
+                    <div class="review-content">
+                        <p class="review-name">王五</p>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">这是一次难忘的旅行，会推荐给朋友。</p>
+                        <img src="https://picsum.photos/200/150" alt="游客上传图片" class="review-image">
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-blue-600 cursor-pointer" id="write-review">我也要点评</p>
+            <!-- 发表新点评表单，初始隐藏 -->
+            <form id="review-form" class="hidden">
+                <div class="mb-4">
+                    <label for="review-name" class="block text-gray-700 font-bold mb-2">姓名</label>
+                    <input type="text" id="review-name" name="review-name"
+                        class="w-full border border-gray-300 p-2 rounded-md" required>
+                </div>
+                <div class="mb-4">
+                    <label for="rating" class="block text-gray-700 font-bold mb-2">评分</label>
+                    <select id="rating" name="rating" class="border border-gray-300 p-2 rounded-md">
+                        <option value="1">1星</option>
+                        <option value="2">2星</option>
+                        <option value="3">3星</option>
+                        <option value="4">4星</option>
+                        <option value="5">5星</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="review-content" class="block text-gray-700 font-bold mb-2">点评内容</label>
+                    <textarea id="review-content" name="review-content" rows="4"
+                        class="w-full border border-gray-300 p-2 rounded-md" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="review-image" class="block text-gray-700 font-bold mb-2">上传图片</label>
+                    <input type="file" id="review-image" name="review-image" class="border border-gray-300 p-2 rounded-md">
+                </div>
+                <button type="submit" class="bg-yellow-400 text-white p-2 rounded-md hover:bg-yellow-500">发表点评</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+
+    <script src="feedback.js"></script>
+</body>
+
+</html>

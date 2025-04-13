@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四合院大门文化 - 无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!-- 引入字体图标 -->
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 40px 0 30px;
+            text-align: center;
+        }
+
+        /* 两栏布局 */
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 50px; /* 增加图片与图片之间的间距 */
+        }
+
+        .image-group {
+            position: relative;
+        }
+
+        figure {
+            text-align: center;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            object-fit: cover; /* 保持图片比例 */
+            max-height: 200px; /* 进一步缩小图片高度 */
+        }
+
+        figure img:hover {
+            transform: scale(1.03);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .figcaption-arrow {
+            margin-left: 5px;
+            font-size: 0.8rem;
+            color: #b7453d;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px; /* 增加文字背景框高度 */
+        }
+
+        .feature-list li div {
+            border: 1px solid #ccc; /* 背景框 */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 第二部分大门文化内涵文字样式恢复 */
+        .culture-feature-list {
+            list-style: none;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .culture-feature-list li {
+            margin: 15px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .culture-feature-list li:before {
+            content: "\f0da"; /* 字体图标箭头 */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #b7453d;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .quote {
+            font-style: italic;
+            color: #67453d;
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #67453d;
+        }
+
+        /* 箭头样式 */
+        .arrow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #b7453d;
+        }
+
+        /* 文本框之间的箭头 */
+        .text-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: #b7453d;
+            margin: 10px 0;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .two-column-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>四合院大门文化</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html">西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2 class="section-title">四合院大门：礼制与美学的时空对话</h2>
+
+        <!-- 大门类型图鉴板块 -->
+        <h3 class="text-xl font-bold mb-4">一、大门类型图鉴</h3>
+        <div class="two-column-layout">
+            <div class="image-column">
+                <div class="image-group">
+                    <figure>
+                        <img src="../media/gates/guangliang_door.jpg" alt="广亮大门" data-index="0">
+                        <figcaption>
+                            广亮大门 <span class="figcaption-arrow">→</span> 等级最高，八字墙彰显威严
+                        </figcaption>
+                    </figure>
+                    <span class="arrow">↓</span>
+                </div>
+                <div class="image-group">
+                    <figure>
+                        <img src="../media/gates/jinzhu_door.jpg" alt="金柱大门" data-index="1">
+                        <figcaption>
+                            金柱大门 <span class="figcaption-arrow">→</span> 门框设于金柱位置，仅次于广亮大门
+                        </figcaption>
+                    </figure>
+                    <span class="arrow">↓</span>
+                </div>
+                <div class="image-group">
+                    <figure>
+                        <img src="../media/gates/ruyi_door.jpg" alt="如意门" data-index="2">
+                        <figcaption>
+                            如意门 <span class="figcaption-arrow">→</span> 平民常用，门楣雕刻“如意”纹饰象征吉祥
+                        </figcaption>
+                    </figure>
+                    <span class="arrow">↓</span>
+                </div>
+                <div class="image-group">
+                    <figure>
+                        <img src="../media/gates/xiyang_door.jpg" alt="西洋门" data-index="3">
+                        <figcaption>
+                            西洋门 <span class="figcaption-arrow">→</span> 晚清中西合璧产物，券洞式设计融合欧式元素
+                        </figcaption>
+                    </figure>
+                    <span class="arrow">↓</span>
+                </div>
+                <div class="image-group">
+                    <figure>
+                        <img src="../media/gates/chuihua_door.jpg" alt="垂花门" data-index="4">
+                        <figcaption>
+                            垂花门 <span class="figcaption-arrow">→</span> 内院分界，垂莲柱雕刻精美，兼具实用与装饰
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="text-column">
+                <ul class="feature-list">
+                    <li>
+                        <div>广亮大门是官员宅邸常用的大门类型，其等级最高，八字墙的设计彰显了主人的威严和地位。</div>
+                    </li>
+                    <div class="text-arrow">↓</div>
+                    <li>
+                        <div>金柱大门的门框设于金柱位置，仅次于广亮大门，通常出现在富商大院中。</div>
+                    </li>
+                    <div class="text-arrow">↓</div>
+                    <li>
+                        <div>如意门是平民常用的大门，门楣上雕刻的“如意”纹饰象征着吉祥如意。</div>
+                    </li>
+                    <div class="text-arrow">↓</div>
+                    <li>
+                        <div>西洋门是晚清中西合璧的产物，券洞式设计融合了欧式元素，体现了当时的时代特征。</div>
+                    </li>
+                    <div class="text-arrow">↓</div>
+                    <li>
+                        <div>垂花门是内院的分界，垂莲柱雕刻精美，既具有实用功能，又起到了装饰作用。</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 文化内涵板块 -->
+        <h3 class="text-xl font-bold mb-4">二、大门文化内涵</h3>
+        <ul class="culture-feature-list">
+            <li>等级象征：广亮大门（官员宅邸）→ 金柱大门（富商大院）→ 如意门/墙垣式门（平民居所）</li>
+            <li>设计智慧：垂花门的悬挑垂莲柱既避雨水又具装饰性，游廊连接形成“雨天不湿鞋”的实用空间</li>
+            <li>历史轶事：传说李莲英为避越制之嫌，将宅门由广亮门改为金柱门，细节彰显官场生存智慧</li>
+        </ul>
+
+        <!-- 引用趣闻 -->
+        <div class="quote">
+            “骆驼祥子若住西四，定是墙垣式门；而曾国藩故居的西洋门楼，却是晚清中西交融的见证。”
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+
+    <!-- 图片放大插件（同历史沿革页面） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-ui-default.min.js"></script>
+    <script>
+        // 图片点击放大逻辑（与历史沿革页面一致）
+        function openPhotoSwipe(images) {
+            const pswpElement = document.querySelectorAll('.pswp')[0];
+            const items = images.map(img => ({
+                src: img.src,
+                w: img.naturalWidth,
+                h: img.naturalHeight,
+                title: img.alt
+            }));
+            const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, { index: 0 });
+            gallery.init();
+        }
+
+        document.querySelectorAll('.image-group img').forEach(img => {
+            img.addEventListener('click', function () {
+                const images = Array.from(this.parentElement.parentElement.querySelectorAll('img'));
+                openPhotoSwipe(images);
+            });
+        });
+    </script>
+
+    <!-- PhotoSwipe 容器 -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <!-- 插件UI组件 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

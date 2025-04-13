@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史沿革 - 无围墙博物馆 - 北京西四北三条胡同</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 40px 0 30px;
+            text-align: center;
+        }
+
+        .image-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .timeline li {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #67453d;
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #67453d;
+        }
+
+        /* PhotoSwipe 样式 */
+        .pswp__caption__center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- 添加图标 -->
+        <img src="../media/your_icon.jpg" alt="网站图标" class="site-icon">
+        <h1>历史沿革</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">景点介绍</a>
+                <ul>
+                    <li><a href="attraction1.html">程砚秋先生故居</a></li>
+                    <li><a href="attraction2.html">西四北幼儿园</a></li>
+                    <li><a href="attraction3.html">胡同里的老胡同</a></li>
+                </ul>
+            </li>
+            <li><a href="online_exhibition.html">线上展示</a></li>
+            <li>
+                <a href="visit_road.html">游览线路</a>
+                <ul class="sub-nav-list">
+                    <li><a href="#">社区平面图</a></li>
+                    <li><a href="#">社区游览线路图</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="feedback.html">反馈与建议</a>
+                <ul>
+                    <li><a href="#">线上信箱</a></li>
+                    <li><a href="#">游客点评</a></li>
+                </ul>
+            </li>
+            <li><a href="storytell.html">故事投稿</a></li>
+            <li>
+                <input type="text" id="search-input" placeholder="搜索">
+                <button id="search-button">搜索</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2 class="section-title">西四北头条至八条历史沿革</h2>
+
+        <!-- 历史地图板块 -->
+        <h3 class="text-xl font-bold mb-4">一、历史地图：元明清时期的鸣玉坊变迁</h3>
+        <div class="image-group">
+            <figure>
+                <img src="..\media\history\yuan_dadu_map.jpg" alt="元大都鸣玉坊示意图" class="w-full">
+                <figcaption>元大都时期鸣玉坊示意图（据《元大都城图》）</figcaption>
+            </figure>
+            <figure>
+                <img src="..\media\history\ming_dynasty_map.jpg" alt="明代鸣玉坊示意图" class="w-full">
+                <figcaption>明代鸣玉坊示意图（据《明北京复原图》）</figcaption>
+            </figure>
+            <figure>
+                <img src="..\media\history\qing_dynasty_map.jpg" alt="清代鸣玉坊示意图" class="w-full">
+                <figcaption>清代鸣玉坊示意图（据《清北京复原图》）</figcaption>
+            </figure>
+        </div>
+
+        <!-- 老照片板块 -->
+        <h3 class="text-xl font-bold mb-4">二、老照片：清末民初历史影像</h3>
+        <div class="image-group">
+            <figure>
+                <img src="..\media\history\xisi_pailou_old.jpg" alt="清末西四牌楼" class="w-full">
+                <figcaption>清末西四牌楼（据搜狐新闻网）</figcaption>
+            </figure>
+            <figure>
+                <img src="..\media\history\guangji_si_old.jpg" alt="民国广济寺" class="w-full">
+                <figcaption>民国时期广济寺大悲坛（据中国文化遗产研究院）</figcaption>
+            </figure>
+            <figure>
+                <img src="..\media\history\diwang_miao_old.jpg" alt="历代帝王庙旧照" class="w-full">
+                <figcaption>清代历代帝王庙正殿示意图</figcaption>
+            </figure>
+        </div>
+
+        <!-- 现代对比图板块 -->
+        <h3 class="text-xl font-bold mb-4">三、现代对比：新旧街景变迁</h3>
+        <div class="image-group">
+            <figure>
+                <img src="..\media\history\xisi_old_compare1.jpg" alt="1967年西四街区" class="w-full">
+                <figcaption>1967年西四街区示意图（据《1967年北京影像图》）</figcaption>
+            </figure>
+            <figure>
+                <img src="..\media\history\xisi_modern_compare2.jpg" alt="2018年西四街区" class="w-full">
+                <figcaption>2018年西四街区遥感影像图</figcaption>
+            </figure>
+        </div>
+        <!-- 如果需要每行三张图片，这里可以添加一个占位的空图或注释 -->
+            <!--<figure>
+                <img src="" alt="" class="w-full">
+                <figcaption></figcaption>
+            </figure> -->
+
+        <!-- 文字内容板块 -->
+        <h3 class="text-xl font-bold mb-4">四、发展脉络：七百年沧桑历程</h3>
+        <ul class="timeline">
+            <li><strong>元代起源</strong>：元大都规划中形成鸣玉坊，奠定胡同棋盘式肌理，胡同宽度遵循“六步规制”。</li>
+            <li><strong>明清发展</strong>：明代兴建帝王庙、广济寺等宗教建筑，清代属正红旗辖区，胡同数量增加并出现支叉胡同。</li>
+            <li><strong>近现代变迁</strong>：新中国成立后实施单位分配住房，文革时期部分胡同更名；改革开放后纳入保护规划，启动腾退修缮工程。</li>
+        </ul>
+
+        <!-- 引用金句 -->
+        <div class="quote">
+            “西四北头条至八条地区是元大都规划的活化石，见证了北京城700余年的沧桑。”
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 无围墙博物馆 - 北京西四北三条胡同
+    </footer>
+
+    <!-- 引入 PhotoSwipe 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-ui-default.min.js"></script>
+    <script>
+        function openPhotoSwipe(images) {
+            const pswpElement = document.querySelectorAll('.pswp')[0];
+            const items = images.map((img) => ({
+                src: img.src,
+                w: img.naturalWidth,
+                h: img.naturalHeight,
+                title: img.alt
+            }));
+
+            const options = {
+                index: parseInt(event.target.dataset.index),
+                showHideOpacity: true,
+                shareEl: false
+            };
+
+            const gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        }
+
+        const imageGroups = document.querySelectorAll('.image-group');
+        imageGroups.forEach((group) => {
+            const images = Array.from(group.querySelectorAll('img'));
+            images.forEach((img) => {
+                img.addEventListener('click', () => {
+                    openPhotoSwipe(images);
+                });
+            });
+        });
+    </script>
+
+    <!-- PhotoSwipe 容器 -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
